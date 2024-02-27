@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cart quantity</title>
+    </head>
+    <body>
+        <button onclick="console.log(`Cart Quantity:`+cartquantity);
+        ">Show Quantity</button>
+
+        <button onclick="console.log(`cartquantity:${updateCartQuantity(1)}`);
+        ">Add to Cart</button>
+        <button onclick="console.log(`cartquantity:${updateCartQuantity(2)}`);
+        ">+2</button>
+        <button onclick="console.log(`cartquantity:${updateCartQuantity(3)}`);
+        ">+3</button>
+        <button onclick="console.log(`cartquantity:${updateCartQuantity(4)}`);
+        ">+4</button>
+        <button onclick="console.log(`cartquantity:${updateCartQuantity(5)}`);
+        ">+5</button>
+
+        <button onclick="cartquantity=0;console.log(`Cart Quantity was reset`);
+        console.log(`Cart Quantity:`+cartquantity)">reset cart</button>
+
+        <button onclick="console.log(`cartquantity:${updateCartQuantity(-1)}`);
+        ">Remove from cart</button>
+        <button onclick="console.log(`cartquantity:${updateCartQuantity(-2)}`);
+        ">Remove 2 from cart</button>
+        <button onclick="console.log(`cartquantity:${updateCartQuantity(-3)}`);
+        ">Remove 3 from cart</button>
+
+        <script src="scripts/cart.js"></script>
+    </body>
+</html>
