@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 9</title>
+    </head>
+    <body>
+        <button class="button9a">9a</button>
+
+        <button class="button9">9b</button>
+
+        <button class="head" onclick="coinClick('Heads')">Heads</button>
+        <button class="tail" onclick="coinClick('Tails')">Tails</button>
+        <p class="para1"></p>
+
+        <input placeholder="Name" type="text" onkeydown="checkTheKey(event);">
+        <button class="submit" onclick="displayName();" >Submit</button>
+        <p class="para2"></p>
+
+
+        <script>
+            console.log(document.querySelector('.button9a'));
+
+            document.querySelector('.button9').innerHTML="9b done!";
+
+            function coinClick(event){
+                document.querySelector('.para1').innerHTML=` You chose: ${event}`;
+            }
+
+            function displayName(){
+                name=document.querySelector('input').value;
+                document.querySelector('.para2').innerHTML=`Your name is: ${name}`;
+            }
+
+            function checkTheKey(event){
+                if(event.key==='Enter'){
+                    displayName();
+                }
+            }
+        </script>
+    </body>
+</html>
