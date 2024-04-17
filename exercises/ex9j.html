@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cart quantity</title>
+    </head>
+    <body>
+        <button onclick="showFinalVal(cartquantity);
+        ">Show Quantity</button>
+
+        <button onclick="updateCartQuantity(1); 
+        ">Add to Cart</button>
+        <button onclick="updateCartQuantity(2); 
+        ">+2</button>
+        <button onclick="updateCartQuantity(3); 
+        ">+3</button>
+        <button onclick="updateCartQuantity(4); 
+        ">+4</button>
+        <button onclick="updateCartQuantity(5); 
+        ">+5</button>
+
+        <button onclick="cartquantity=0; showFinalVal(cartquantity); ">reset cart</button>
+
+        <button onclick="updateCartQuantity(-1); 
+        ">Remove from cart</button>
+        <button onclick="updateCartQuantity(-2); 
+        ">Remove 2 from cart</button>
+        <button onclick="updateCartQuantity(-3);
+        ">Remove 3 from cart</button>
+
+        <p></p>
+        <script>
+            let cartquantity=0;
+            function updateCartQuantity(n){
+                if(cartquantity+n>10){
+                    alert('the cart is full!');
+                    return;
+                }
+                if(cartquantity+n<0){
+                    alert('not enough items in cart');
+                    return;
+                }
+                cartquantity+=n;
+                showFinalVal(cartquantity);
+            }
+            function showFinalVal(cartquantity){
+                document.querySelector('p').innerHTML=`Cart Quantity: ${cartquantity}`;
+            }
+        </script>
+    </body>
+</html>
